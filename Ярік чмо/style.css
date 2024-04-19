@@ -1,0 +1,37 @@
+
+.header {
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    padding: 15px;
+}
+
+.logo {
+    font-size: 40px;
+    margin-right: auto;
+    background: linear-gradient(135deg, #E2B0FF 0%, #9F44D3 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+.button__line  {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.penis_c {
+    margin-right: 20px;
+    margin-left: 20px;
+}
