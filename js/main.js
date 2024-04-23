@@ -14,7 +14,7 @@ window.onload = function(){
 function sendOrder() {
 
     var name = document.getElementById('name').value;
-    var phone = document.getElementById('phone-number').value;
+    var phone = document.getElementById('phone').value;
     var comment = document.getElementById('comment').value;
 
     var message = `
@@ -37,9 +37,9 @@ function sendOrder() {
             alert('Помилка відправлення повідомлення.');
         });
 
-    document.getElementById('name').value = '';
-    document.getElementById(phoneId).value = '';
-    document.getElementById('comment').value = '';
+    document.getElementById('name').value = name;
+    document.getElementById('phone').value = phone;
+    document.getElementById('comment').value = comment;
 
-    return false; 
+    return false;  
 }
