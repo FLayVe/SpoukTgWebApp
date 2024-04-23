@@ -7,13 +7,13 @@ const botApiUrl = `https://api.telegram.org/bot${token}/sendMessage`;
 
 window.onload = function(){
 
-    document.getElementById("user-name").innerText = userData.username;
+    document.getElementById("user-name").innerText = userData.first_name;
 
 }
 
 function sendOrder() {
 
-    var teg = "{User}"
+    var teg = userData ? userData.username : '{User}'
     var name = document.getElementById('name').value;
     var phone = document.getElementById('phone').value;
     var comment = document.getElementById('comment').value;
