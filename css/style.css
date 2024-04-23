@@ -43,9 +43,9 @@ a {
 }
 
 a, button, input, textarea { 
-    -webkit-tap-highlight-color: transparent; /* для iOS Safari */
-    -webkit-user-select: none; /* запобігає виділенню тексту */
-    user-select: none; /* запобігає виділенню тексту на більшості браузерів */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none; 
+    user-select: none; 
 }
 
 
