@@ -1,10 +1,8 @@
 let tg = window.Telegram.WebApp;
 
+tg.ready();
 tg.expand();
 
-let wellcome_message_card =  document.getElementById("welcome__user-name");
-let wellcome_text = document.createElement("p");
+let wellcome_message =  document.getElementById("welcome__user-name");
 
-wellcome_text.innerText  = `Hello, ${tg.initDataUnsafe.first_name}`;
-
-wellcome_message_card.appendChild(wellcome_text);
+wellcome_messagem.innerText  = `Hi, ${tg.initDataUnsafe.first_name}`;
