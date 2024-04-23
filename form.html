@@ -10,6 +10,11 @@
       rel="stylesheet">
       <link rel="stylesheet" href="css/form.css">
       <link rel="stylesheet" href="css/reset.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="js/main.js"></script>
+    
 </head>
 <body>
     <main class="main">
@@ -20,7 +25,7 @@
             <input id="name" class="main__input" type="text" placeholder="Your name">
             <input id="phone" class="main__input cen" type="number" placeholder="Phone number">
             <input id="comment" class="main__input" type="text" placeholder="Message">
-            <button class="button__form" onclick="sendMessage('Contact Form', 'phone')">send info</button>
+            <button class="button__form" onclick="sendOrder()">send info</button>
             <div class="line__form">
                 
             </div>
@@ -28,46 +33,6 @@
         
     </main>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script>
-    function sendMessage(formName, phoneId) {
-        var name = document.getElementById('name').value;
-        var phone = document.getElementById(phoneId).value;
-        var comment = document.getElementById('comment').value;
 
-        var token = '6419070785:AAHaIp5r0-T5xsjdghyuq-6i2WB0J6Q3bOY';
-        var chatId = '-1002123032129';
 
-        var message = `
-          ${formName}:
-          Name: ${name}
-          Phone: ${phone}
-          Link network: ${comment}
-        `;
-
-        var apiUrl = `https://api.telegram.org/bot${token}/sendMessage`;
-        var params = {
-            chat_id: chatId,
-            text: message,
-        };
-
-        // Впевніться, що бібліотека Axios підключена перед використанням
-        axios.post(apiUrl, params)
-            .then(function (response) {
-                console.log(response);
-                alert('Повідомлення відправлено успішно!');
-            })
-            .catch(function (error) {
-                console.error(error);
-                alert('Помилка відправлення повідомлення.');
-            });
-
-        // Очистимо поля форми після надсилання
-        document.getElementById('name').value = '';
-        document.getElementById(phoneId).value = '';
-        document.getElementById('comment').value = '';
-
-        return false; // Це для того, щоб форма не відправляла дані стандартним способом
-    }
-</script>
 </html>
