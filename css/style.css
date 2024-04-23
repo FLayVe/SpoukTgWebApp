@@ -49,9 +49,6 @@ a:visited {
   text-decoration: none;
 }
 
-a:active {
-  text-decoration: underline;
-}
 
 a, button, input, textarea { 
     -webkit-tap-highlight-color: transparent;
