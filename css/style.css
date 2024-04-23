@@ -177,7 +177,7 @@ button {
 	.price__title::before {
 		content: '';
 		position: absolute;
-		background-image: url('../images/price.png');
+		background-image: url('../images/price1.1.png');
 		width: 138px;
 		height: 146px;
 		background-repeat: no-repeat;
