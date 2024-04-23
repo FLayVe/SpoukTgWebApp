@@ -16,12 +16,11 @@ body {
 	min-width: 320px;
 	border-radius: 55px;
 	background: linear-gradient(192deg, #08000c 8.79%, #530279 351.02%);
-	height: 100%;
+	height: 100vh;
 }
 
 .container {
 	padding: 0 18px;
-	/* margin: 0 auto; */
 }
 
 input {
@@ -41,19 +40,13 @@ a {
 	outline: none;
 }
 
-a:link {
-  text-decoration: none;
-}
-
-a:visited {
-  text-decoration: none;
-}
-
-
-a, button, input, textarea { 
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none; 
-    user-select: none; 
+a,
+button,
+input,
+textarea {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 button {
@@ -84,6 +77,7 @@ button {
 	}
 	.welcome {
 		margin-bottom: 20px;
+		margin-top: 38px;
 	}
 
 	.welcome__inner {
@@ -160,7 +154,6 @@ button {
 		font-weight: 600;
 		text-transform: uppercase;
 	}
-	
 
 	.about {
 		margin-bottom: 30px;
@@ -185,10 +178,6 @@ button {
 		position: relative;
 		overflow: hidden;
 	}
-	.price__title {
-		/* margin-right: 20px; */
-		/* left: 0; */
-	}
 
 	.price__img {
 		position: absolute;
@@ -199,22 +188,7 @@ button {
 		width: 110%;
 		height: 100%;
 		object-fit: cover;
-
-		/* top: 0; */
-		/* left: -25px; */
-		/* object-fit: cover; */
 	}
-	/* .price__title::before {
-		content: '';
-		position: absolute;
-		background-image: url('../images/price.png');
-		width: 138px;
-		height: 146px;
-		background-repeat: no-repeat;
-		top: 0;
-		left: 0;
-		border-radius: 14px;
-	} */
 
 	.price__title:after {
 		content: '';
@@ -252,21 +226,6 @@ button {
 		object-fit: cover;
 	}
 
-	.cases__title {
-	}
-
-	/* .cases__title:after {
-		content: '';
-		position: absolute;
-		background-image: url('../images/cases.png');
-		background-repeat: no-repeat;
-		width: 120px;
-		height: 131px;
-		bottom: 0;
-		right: 0;
-		border-radius: 14px;
-	} */
-
 	.cases__title:before {
 		content: '';
 		position: absolute;
@@ -289,7 +248,7 @@ button {
 		border: 0.5px solid #7d607a;
 		background: linear-gradient(297deg, #3b1c6d -4.62%, #6830b7 98.79%);
 		box-shadow: 0px 4px 57.3px 0px #592899;
-		color: #D3CED5;
+		color: #d3ced5;
 		position: relative;
 		overflow: hidden;
 	}
@@ -319,6 +278,7 @@ button {
 			transform: translateY(10px);
 		}
 	}
+
 	.services__img {
 		animation: moveUpAstro 4s infinite alternate;
 		position: absolute;
@@ -332,11 +292,8 @@ button {
 	.reviews {
 		position: relative;
 		display: block;
-		margin-bottom: 60px;
-		/* overflow: hidden; */
+		/* margin-bottom: 60px; */
 	}
-
-	 
 
 	.reviews__img {
 		position: absolute;
@@ -359,10 +316,10 @@ button {
 		overflow: hidden;
 	}
 
-	.reviews__title span{
-		color: #CC99FF;
+	.reviews__title span {
+		color: #cc99ff;
 	}
-	
+
 	.reviews__title::after {
 		content: '';
 		position: absolute;
@@ -374,16 +331,15 @@ button {
 		left: 0;
 		transform: translateX(10%);
 		object-fit: cover;
-		/* transform: rotate(10deg); */
-	} 
+	}
 	.nav {
-		/* position: fixed;
+		position: fixed;
 		z-index: 10;
-		bottom: 0;
+		bottom: 20px;
 		left: 0;
-		right: 0; */
+		right: 0;
 
-		margin-bottom: 38px;
+		/* margin-bottom: 38px; */
 	}
 	.nav__inner {
 		display: flex;
@@ -395,6 +351,7 @@ button {
 		box-shadow: 0px 4px 222.8px 0px #780ffe,
 			0px 1px 40px 0px rgba(78, 26, 105, 0.58) inset,
 			0px 4px 18px 0px rgba(154, 146, 210, 0.17) inset;
+		backdrop-filter: blur(10.050000190734863px);
 		padding: 14px 42px;
 		width: 290px;
 		margin: 0 auto;
@@ -402,7 +359,6 @@ button {
 	.nav__link {
 		display: block;
 		position: relative;
-
 	}
 
 	.nav__link:focus path,
@@ -442,7 +398,7 @@ button {
 		padding: 13px 3px 85px 85px;
 	}
 
-	.cases__img{
+	.cases__img {
 		right: -12px;
 	}
 
@@ -462,10 +418,10 @@ button {
 	.price {
 		padding: 13px 3px 85px 90px;
 	}
-	.cases{
+	.cases {
 		padding: 68px 66px 30px 13px;
 	}
-	.cases__img{
+	.cases__img {
 		right: -10px;
 	}
 	.services__img {
