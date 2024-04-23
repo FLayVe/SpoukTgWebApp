@@ -376,6 +376,56 @@ button {
 		object-fit: cover;
 		/* transform: rotate(10deg); */
 	} 
+	.nav {
+		/* position: fixed;
+		z-index: 10;
+		bottom: 0;
+		left: 0;
+		right: 0; */
+
+		margin-bottom: 38px;
+	}
+	.nav__inner {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		border-radius: 28px;
+		border: 1px solid #502695;
+		background: rgba(0, 0, 0, 0.01);
+		box-shadow: 0px 4px 222.8px 0px #780ffe,
+			0px 1px 40px 0px rgba(78, 26, 105, 0.58) inset,
+			0px 4px 18px 0px rgba(154, 146, 210, 0.17) inset;
+		padding: 14px 42px;
+		width: 290px;
+		margin: 0 auto;
+	}
+	.nav__link {
+		display: block;
+		position: relative;
+
+	}
+
+	.nav__link:focus path,
+	.nav__link:active path {
+		fill: #a56fff;
+	}
+
+	.nav__link:focus::after,
+	.nav__link:active::after {
+		content: '';
+		position: absolute;
+		border-radius: 18px;
+		background: #a56fff;
+		height: 2px;
+		width: 25px;
+		bottom: -5px;
+		left: 0;
+		right: 0;
+	}
+
+	.nav__link + .nav__link {
+		margin-left: 37px;
+	}
 }
 
 @media (min-width: 400px){
