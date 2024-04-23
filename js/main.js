@@ -3,4 +3,7 @@ let tg = window.Telegram.WebApp;
 tg.ready();
 tg.expand();
 
-document.getElementById("welcome__user-name").innerText = `Hi, ${window.Telegram.WebAppUser.first_name}`;
+const userData = tg.initDataUnsafe.user;
+const username = userData.username ? `@${userData.username}` : userData.first_name;
+
+document.getElementById("welcome__user-name").innerText = `Привіт, ${username}!`;
