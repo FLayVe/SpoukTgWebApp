@@ -31,7 +31,6 @@
 .form {
     margin: 0 auto;
     border-radius: 15px;
-    border: 1px solid rgba(81, 0, 119, 0.13);
     background: rgba(138, 71, 205, 0.15);
     backdrop-filter: blur(12.949999809265137px);
     display: flex;
