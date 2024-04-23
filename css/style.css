@@ -57,6 +57,12 @@ a:active {
   text-decoration: underline;
 }
 
+a, button, input, textarea { 
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none; 
+    user-select: none; 
+}
+
 button {
 	outline: none;
 	border: none;
