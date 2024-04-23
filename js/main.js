@@ -11,14 +11,15 @@ window.onload = function(){
 
 }
 
-function sendOrder() {
+function sendOrder(formName, phoneId) {
 
     var name = document.getElementById('name').value;
-    var phone = document.getElementById('phone').value;
+    var phone = document.getElementById(phoneId).value;
     var comment = document.getElementById('comment').value;
 
     var message = `
-        ${userData.username}
+        ${formName}:
+        Username: ${userData.username}
         Name: ${name}
         Phone: ${phone}
         Comment: ${comment} 
@@ -40,7 +41,7 @@ function sendOrder() {
         });
 
     document.getElementById('name').value = '';
-    document.getElementById('phone').value = '';
+    document.getElementById(phoneId).value = '';
     document.getElementById('comment').value = '';
 
     return false;  
