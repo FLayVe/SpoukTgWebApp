@@ -1,13 +1,13 @@
 let tg = window.Telegram.WebApp;
 const userData = tg.initDataUnsafe.user;
 
-const token = '6419070785:AAHaIp5r0-T5xsjdghyuq-6i2WB0J6Q3bOY'
-const groupChatId  = '-1002123032129'
+const token = '6419070785:AAHaIp5r0-T5xsjdghyuq-6i2WB0J6Q3bOY';
+const groupChatId  = '-1002123032129';
 const botApiUrl = `https://api.telegram.org/bot${token}/sendMessage`;
 
 window.onload = function(){
 
-    document.getElementById("user-name").innerText = userData.first_name;
+    document.getElementById("user-name").innerText = userData ? userData.first_name : '{User}';
 
 }
 
@@ -19,10 +19,10 @@ function sendOrder() {
     var comment = document.getElementById('comment').value;
     
     var message = `
-        ${teg}
+    @${teg}
       Name: ${name}
       Phone: ${phone}
-      Link network: ${comment}
+      Comment: ${comment}
     `;
 
     
@@ -35,6 +35,7 @@ function sendOrder() {
         .then(function (response) {
             console.log(response);
             alert('Повідомлення відправлено успішно!');
+            window.location.href = "index.html"
         })
         .catch(function (error) {
             console.error(error);
