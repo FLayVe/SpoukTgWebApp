@@ -379,6 +379,11 @@ button {
 		right: 0;
 	}
 
+	.nav__link:focus:last-child::after,
+	.nav__link:active:last-child:after{
+		transform: translateX(-11%);
+	}
+
 	.nav__link + .nav__link {
 		margin-left: 37px;
 	}
