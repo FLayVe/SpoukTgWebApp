@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/style.css">
   
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
@@ -106,28 +106,6 @@
       </div>
     </a>
   </main>
-
-
-
-
-
-
-
-
- <script>
-function setNickname() {
-    let tg = window.Telegram.WebApp;
-    const userData = tg.initDataUnsafe.user;
-    const nickname = userData.username ? `@${userData.username}` : userData.first_name;
-
-    document.getElementById("user-nickname").innerText = nickname;
-}
-
-window.onload = function() {
-    setNickname();
-};
-
- </script>
 
 
 
