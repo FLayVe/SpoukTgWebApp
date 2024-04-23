@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #000;
+}
+
+.logo{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #E2B0FF 0%, #9F44D3 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.loader{
+    height: 2px;
+    border-radius: 5px;
+    display: inline-block;
+    position: fixed;
+	z-index: 10;
+	bottom: 38px;
+    left: 0px;
+    background: #5C3765;
+    overflow: hidden;
+}
+.loader::after {
+    content: '';
+    position: fixed;
+	z-index: 10;
+	bottom: 38px; 
+    left: 0px; 
+    border-radius: 5px;
+    height: 2px;
+    background: #BF3CDF;
+    animation: loader_anim 5s linear infinite;
+  }
+  
+  @keyframes loader_anim {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
