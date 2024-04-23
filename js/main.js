@@ -29,17 +29,19 @@ function sendOrder() {
         text: message,
     };
 
-    axios.post(botApiUrl, params)
+    aaxios.post(botApiUrl, params)
         .then(function (response) {
+            console.log(response);
             alert('Повідомлення відправлено успішно!');
         })
         .catch(function (error) {
+            console.error(error);
             alert('Помилка відправлення повідомлення.');
         });
 
-    document.getElementById('name').value = name;
-    document.getElementById('phone').value = phone;
-    document.getElementById('comment').value = comment;
+    document.getElementById('name').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('comment').value = '';
 
     return false;  
 }
