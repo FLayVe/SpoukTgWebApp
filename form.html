@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Форма зв'язку</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/main.js"></script>
 </head>
 <body>
 
@@ -14,7 +17,7 @@
       <div class="card">
         <div class="card-body">
           <h3 class="card-title text-center">Зв'яжіться з нами</h3>
-          <form action="#" onsubmit="sendMessage('Форма зв\'язку', 'phone')">
+          <form action="#" onsubmit="sendMessage()">
             <div class="form-group">
               <label for="name">Ім'я</label>
               <input type="text" class="form-control" id="name" name="name" required>
@@ -35,48 +38,8 @@
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script>
-    function sendMessage(formName, phoneId) {
-        var name = document.getElementById('name').value;
-        var phone = document.getElementById(phoneId).value;
-        var comment = document.getElementById('comment').value;
 
-        var token = '6419070785:AAHaIp5r0-T5xsjdghyuq-6i2WB0J6Q3bOY';
-        var chatId = '-1002123032129';
 
-        var message = `
-          ${formName}:
-          Name: ${name}
-          Phone: ${phone}
-          Link network: ${comment}
-        `;
-
-        var apiUrl = `https://api.telegram.org/bot${token}/sendMessage`;
-        var params = {
-            chat_id: chatId,
-            text: message,
-        };
-
-        // Впевніться, що бібліотека Axios підключена перед використанням
-        axios.post(apiUrl, params)
-            .then(function (response) {
-                console.log(response);
-                alert('Повідомлення відправлено успішно!');
-            })
-            .catch(function (error) {
-                console.error(error);
-                alert('Помилка відправлення повідомлення.');
-            });
-
-        // Очистимо поля форми після надсилання
-        document.getElementById('name').value = '';
-        document.getElementById(phoneId).value = '';
-        document.getElementById('comment').value = '';
-
-        return false; // Це для того, щоб форма не відправляла дані стандартним способом
-    }
-</script>
 
 </body>
 </html>

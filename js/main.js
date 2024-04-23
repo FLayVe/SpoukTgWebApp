@@ -1,10 +1,45 @@
+let tg = window.Telegram.WebApp;
+const userData = tg.initDataUnsafe.user;
+
+const token = '6419070785:AAHaIp5r0-T5xsjdghyuq-6i2WB0J6Q3bOY'
+const groupChatID  = '-1002123032129'
+const botApiUrl = `https://api.telegram.org/bot${token}/sendMessage`;
+
 window.onload = function(){
 
-    let tg = window.Telegram.WebApp;
-    
-    const userData = tg.initDataUnsafe.user;
-    const userFirstName = userData.first_name;
+    document.getElementById("user-name").innerText = userData.first_name;
 
-    document.getElementById("user-name").innerText = userFirstName;
+}
 
+function sendOrder() {
+
+    var name = document.getElementById('name').value;
+    var phone = document.getElementById('phone-number').value;
+    var comment = document.getElementById('comment').value;
+
+    var message = `
+        ${userData.username}
+        Name: ${name}
+        Phone: ${phone}
+        Comment: ${comment} 
+    `;
+
+    var params = {
+        chat_id: groupChatID,
+        text: message,
+    };
+
+    axios.post(botApiUrl, params)
+        .then(function (response) {
+            alert('Повідомлення відправлено успішно!');
+        })
+        .catch(function (error) {
+            alert('Помилка відправлення повідомлення.');
+        });
+
+    document.getElementById('name').value = '';
+    document.getElementById(phoneId).value = '';
+    document.getElementById('comment').value = '';
+
+    return false; 
 }
