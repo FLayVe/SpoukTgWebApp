@@ -16,6 +16,10 @@
   <link rel="stylesheet" href="css/style.css">
   
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
 </head>
 
 <body>
@@ -37,9 +41,10 @@
               <img src="./images/s.png" alt="">
             </div>
             <div class="welcome__user-info">
-              <div class="welcome__user-name" id="welcome__user-name">
-                Hi, Viktor
-              </div>
+             <div class="welcome__user-name" id="welcome__user-name">
+                  Hi, <span id="user-nickname">(User)</span>
+             </div>
+
               <div class="welcome__user-text">
                 Welcome back!
               </div>
@@ -110,21 +115,22 @@
 
 
  <script>
-    const tg = window.Telegram.WebApp;
+function setNickname() {
+    let tg = window.Telegram.WebApp;
+    const userData = tg.initDataUnsafe.user;
+    const nickname = userData.username ? `@${userData.username}` : userData.first_name;
 
-    tg.ready();
-    tg.expand();
+    document.getElementById("user-nickname").innerText = nickname;
+}
 
-    const user_first_name = tg.initDataUnsafe.user.first_name
-    
-    document.getElementById("welcome__user-name").innerText = `Hello, ${username}!`;
+window.onload = function() {
+    setNickname();
+};
+
  </script>
 
 
-  <script src="js/main.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/slick.min.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
+
 </body>
 
 </html>
