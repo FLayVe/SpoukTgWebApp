@@ -292,7 +292,7 @@ button {
 	.reviews {
 		position: relative;
 		display: block;
-		/* margin-bottom: 60px; */
+		margin-bottom: 60px;
 	}
 
 	.reviews__img {
