@@ -211,10 +211,15 @@ button {
 		border-radius: 14px;
 		border: 0.5px solid #613b9e;
 		background: linear-gradient(180deg, #381b68 0%, #6f35ce 100%);
-		box-shadow: 0px 4px 65.3px 0px #b414ff inset;
+		box-shadow: 0px 4px 57.3px 0px #5d2cac;
 		position: relative;
 		z-index: 3;
 		overflow: hidden;
+	}
+
+	.cases:hover,
+	.cases:focus {
+		box-shadow: 0px 4px 65.3px 0px #b414ff inset;
 	}
 
 	.cases__img {
@@ -380,7 +385,7 @@ button {
 	}
 
 	.nav__link:focus:last-child::after,
-	.nav__link:active:last-child:after{
+	.nav__link:active:last-child:after {
 		transform: translateX(-11%);
 	}
 
