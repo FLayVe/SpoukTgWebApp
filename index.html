@@ -42,7 +42,7 @@
             </div>
             <div class="welcome__user-info">
              <div class="welcome__user-name" id="welcome__user-name">
-                  Hi, 123
+                  Hi, <span id="user-name">(User)</span>
              </div>
 
               <div class="welcome__user-text">
@@ -107,6 +107,25 @@
     </a>
   </main>
 
+  <script>
+
+    function setWellcomeText(){
+        const tg = window.Telegram.WebApp;
+        tg.ready()
+
+        const userData = tg.initDataUnsafe.user;
+        const userFirtName = userData.first_name;
+
+        document.getElementById("user-name").innerText = userFirtName
+    }
+    
+    
+    window.onload() = function() {
+        setWellcomeText()
+    }
+    
+
+  </script>
 
 </body>
 
