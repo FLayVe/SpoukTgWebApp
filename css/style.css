@@ -16,7 +16,7 @@ body {
 	min-width: 320px;
 	border-radius: 55px;
 	background: linear-gradient(192deg, #08000c 8.79%, #530279 351.02%);
-	height: 100vh;
+	min-height: 100vh;
 }
 
 .container {
