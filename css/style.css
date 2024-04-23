@@ -41,12 +41,21 @@ a {
 	outline: none;
 }
 
-a, button, input, textarea { 
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none; 
-    user-select: none; 
+a:link {
+  text-decoration: none;
 }
 
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
 
 button {
 	outline: none;
@@ -183,7 +192,7 @@ button {
 	.price__title::before {
 		content: '';
 		position: absolute;
-		background-image: url('../images/price1.1.png');
+		background-image: url('../images/price.png');
 		width: 138px;
 		height: 146px;
 		background-repeat: no-repeat;
@@ -266,8 +275,17 @@ button {
 		top: -15px;
 	}
 
+	@keyframes moveUpAstro{
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(35px);
+		}
+	}
 	.services__title::before {
-		content: "";
+		content: '';
 		position: absolute;
 		background-image: url('../images/services-decor.png');
 		background-repeat: no-repeat;
