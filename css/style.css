@@ -428,8 +428,48 @@ button {
 	}
 }
 
-@media (min-width: 400px){
-	.reviews__title::after{
+@media (min-width: 410px) {
+	.price,
+	.cases {
+		width: 175px;
+	}
+
+	.price__img {
+		top: -7px;
+	}
+
+	.price {
+		padding: 13px 3px 85px 85px;
+	}
+
+	.cases__img{
+		right: -12px;
+	}
+
+	.reviews__title::after {
 		transform: translateX(20%);
+	}
+}
+
+@media (min-width: 420px) {
+	.price,
+	.cases {
+		width: 185px;
+	}
+	.price__img {
+		top: -6px;
+	}
+	.price {
+		padding: 13px 3px 85px 90px;
+	}
+	.cases{
+		padding: 68px 66px 30px 13px;
+	}
+	.cases__img{
+		right: -10px;
+	}
+	.services__img {
+		min-width: 300px;
+		max-height: 185px;
 	}
 }
