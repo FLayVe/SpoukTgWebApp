@@ -58,7 +58,7 @@ body {
 	border-radius: 5px;
 	height: 4px;
 	background: #bf3cdf;
-	animation: loader_anim 5s linear infinite;
+	animation: loader_anim 3.5s linear infinite;
 }
 
 @keyframes loader_anim {
