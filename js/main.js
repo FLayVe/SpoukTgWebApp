@@ -33,8 +33,8 @@ function sendOrder() {
 
     if (phone.trim() === "") {
 
-        inputName.classList.add("error-border");
-        inputName.placeholder = "Phone number (required)";
+        inputPhone.classList.add("error-border");
+        inputPhone.placeholder = "Phone number (required)";
         isReady = false
     }
 
@@ -42,9 +42,9 @@ function sendOrder() {
 
         var message = `
         @${tag}
-            Name: ${name}
-            Phone: ${phone}
-            Comment: ${comment}
+        Name: ${name}
+        Phone: ${phone}
+        Comment: ${comment}
         `;
 
     
