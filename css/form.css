@@ -7,9 +7,15 @@
 .main {
     background: #000;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
 }
 
+
+a, button, input, textarea { 
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none; 
+    user-select: none; 
+}
 
 .contact__us {
     padding-top: 70px;
