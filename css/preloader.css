@@ -14,10 +14,28 @@ body {
 	font-style: normal;
 	font-weight: 800;
 	line-height: 26px; /* 72.222% */
-	background: linear-gradient(135deg, #e2b0ff 0%, #9f44d3 100%);
+	text-align: center;
+
+	background: linear-gradient(to right, rgba(80, 0, 108, 1)
+ 20%, rgba(140, 27, 179, 1)
+ 40%, rgba(220, 124, 253, 1)
+ 60%, rgba(233, 117, 243, 1)
+ 80%);
+	background-size: 200% auto;
+
+	color: #000;
 	background-clip: text;
+	text-fill-color: transparent;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+
+	animation: shine 1s linear infinite;
+}
+
+@keyframes shine {
+	to {
+		background-position: 200% center;
+	}
 }
 
 .loader {
