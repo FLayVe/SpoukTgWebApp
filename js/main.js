@@ -13,38 +13,61 @@ window.onload = function(){
 
 function sendOrder() {
 
-    var teg = userData ? userData.username : '{User}'
-    var name = document.getElementById('name').value;
-    var phone = document.getElementById('phone').value;
-    var comment = document.getElementById('comment').value;
+    var isReady = true;
+
+    var inputName = document.getElementById('name');
+    var inputPhone = document.getElementById('phone');
+    var inputComment = document.getElementById('comment');
+
+    var tag = userData ? userData.username : '{User}'
+    var name = inputName.value;
+    var phone = inputPhone.value;
+    var comment = inputComment.value;
     
-    var message = `
-    @${teg}
-      Name: ${name}
-      Phone: ${phone}
-      Comment: ${comment}
-    `;
+    if (name.trim() === "") {
+
+        inputName.classList.add("error-border");
+        inputName.placeholder = "Your name (required)";
+        isReady = false
+    }
+
+    if (phone.trim() === "") {
+
+        inputName.classList.add("error-border");
+        inputName.placeholder = "Phone number (required)";
+        isReady = false
+    }
+
+    if (isReady) {
+
+        var message = `
+        @${tag}
+            Name: ${name}
+            Phone: ${phone}
+            Comment: ${comment}
+        `;
 
     
-    var params = {
-        chat_id: groupChatId,
-        text: message,
-    };
+        var params = {
+            chat_id: groupChatId,
+            text: message,
+        };
 
-    axios.post(botApiUrl, params)
-        .then(function (response) {
-            console.log(response);
-            alert('Повідомлення відправлено успішно!');
-            window.location.href = "index.html"
-        })
-        .catch(function (error) {
-            console.error(error);
-            alert('Помилка відправлення повідомлення.');
-        });
+        axios.post(botApiUrl, params)
+            .then(function (response) {
+                console.log(response);
+                alert('Повідомлення відправлено успішно!');
+                window.location.href = "index.html"
+            })
+            .catch(function (error) {
+                console.error(error);
+                alert('Помилка відправлення повідомлення.');
+            });
 
-    document.getElementById('name').value = '';
-    document.getElementById('phone').value = '';
-    document.getElementById('comment').value = '';
+        document.getElementById('name').value = '';
+        document.getElementById('phone').value = '';
+        document.getElementById('comment').value = '';
+    }
 
     return false;
 }
