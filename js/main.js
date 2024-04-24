@@ -26,14 +26,12 @@ function sendOrder() {
     
     if (name.trim() === "") {
 
-        inputName.classList.add("error-border");
         inputName.placeholder = "Your name (required)";
         isReady = false
     }
 
     if (phone.trim() === "") {
 
-        inputPhone.classList.add("error-border");
         inputPhone.placeholder = "Phone number (required)";
         isReady = false
     }
@@ -64,9 +62,13 @@ function sendOrder() {
                 alert('Помилка відправлення повідомлення.');
             });
 
-        document.getElementById('name').value = '';
-        document.getElementById('phone').value = '';
-        document.getElementById('comment').value = '';
+
+        inputName.placeholder = "Your name";
+        inputPhone.placeholder = "Phone number";
+
+        inputName.value = "";
+        inputPhone.value = "";
+        inputComment.value = "";
     }
 
     return false;
