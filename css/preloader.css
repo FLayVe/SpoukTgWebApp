@@ -1,51 +1,53 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background: #000;
 }
 
-.logo{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 36px;
-    text-transform: uppercase;
-    background: linear-gradient(135deg, #E2B0FF 0%, #9F44D3 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.logo {
+	text-shadow: 73px 4px 250px #fc57c9;
+	font-family: 'Montserrat';
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 26px; /* 72.222% */
+	background: linear-gradient(135deg, #e2b0ff 0%, #9f44d3 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
-.loader{
-    height: 2px;
-    border-radius: 5px;
-    display: inline-block;
-    position: fixed;
+.loader {
+	height: 4px;
+	border-radius: 5px;
+	display: inline-block;
+	position: fixed;
 	z-index: 10;
-	bottom: 38px;
-    left: 0px;
-    background: #5C3765;
-    overflow: hidden;
+	bottom: 0px;
+	left: 0px;
+	background: #5c3765;
+	overflow: hidden;
+	width: 100%;
 }
 .loader::after {
-    content: '';
-    position: fixed;
+	content: '';
+	position: fixed;
 	z-index: 10;
-	bottom: 38px; 
-    left: 0px; 
-    border-radius: 5px;
-    height: 2px;
-    background: #BF3CDF;
-    animation: loader_anim 5s linear infinite;
-  }
-  
-  @keyframes loader_anim {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }
-  }
+	left: 0px;
+	border-radius: 5px;
+	height: 4px;
+	background: #bf3cdf;
+	animation: loader_anim 5s linear infinite;
+}
+
+@keyframes loader_anim {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
