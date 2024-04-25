@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,46 +8,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet">
-      <link rel="stylesheet" href="css/form.css">
-      <link rel="stylesheet" href="css/reset.css">
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/reset.css">
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="js/main.js"></script>
-    
+
 </head>
+
 <body>
-    <main class="main"> 
+    <main class="main">
         <div class="container">
-            <a class="pines" href="./main.html"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
-                    <path d="M0.292893 7.29289C-0.0976311 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292893 7.29289ZM3 7H1L1 9H3V7Z" fill="#D0C8F3"/>
-                  </svg></a>
-              <p class="contact__us">contact us</p>
+            <p class="contact__us">contact us</p>
             <img class="form__img" src="./images/formimg.png" alt="">
 
-        <div class="form">
-            <input id="name" class="main__input" type="text" placeholder="Your name">
-            <input id="phone" class="main__input cen" type="number" placeholder="Phone number">
-            <input id="comment" class="main__input dj" type="text" placeholder="Message">
-            <button class="button__form" onclick="sendOrder()">Send info</button>
-            
-        </div>
+            <div class="form">
+                <input id="name" class="main__input" type="text" placeholder="Your name">
+                <input id="phone" class="main__input cen" type="number" placeholder="Phone number">
+                <input id="comment" class="main__input dj" type="text" placeholder="Message">
+                <button class="button__form" onclick="sendOrder()">Send info</button>
+
+            </div>
         </div>
     </main>
 </body>
 
 <script>
 
-    var BackButton = window.Telegram.WebApp.BackButton;
-
-    BackButton.show();
-    BackButton.onClick(function() {
-        BackButton.hide();
-        window.location.href = './main.html';
-    });
+    window.onload = function () {
+        showBackButton();
+    }
 
 </script>
 
 </html>
-
