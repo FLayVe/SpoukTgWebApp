@@ -11,7 +11,10 @@ a, button, input, textarea {
     -webkit-tap-highlight-color: transparent;
     -webkit-user-select: none; 
     user-select: none; 
+    text-decoration: none;
 }
+
+
 
 
 .user {
@@ -20,7 +23,7 @@ a, button, input, textarea {
     font-size: 24px;
     font-weight: 600;
     text-align: center;
-    margin-top: 76px;
+    margin-top: 26px;
     margin-bottom: 62px;
 }
 
@@ -29,7 +32,7 @@ a, button, input, textarea {
     display: flex;
     align-items: center;
     border-radius: 103px;
-    border: 1.7px solid #8b2f92;
+    border: 1.2px solid #8b2f92;
     padding: 26px 36px;
     margin-bottom: 18px;
     background: #000;
@@ -48,6 +51,7 @@ a, button, input, textarea {
     font-size: 18px;
     font-weight: 300;
     margin-right: auto;
+    text-decoration: none;
 }
 
 
@@ -63,7 +67,6 @@ a, button, input, textarea {
     left: 0;
     right: 0;
 
-    /* margin-bottom: 38px; */
 }
 .nav__inner {
     display: flex;
