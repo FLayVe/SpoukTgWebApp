@@ -399,6 +399,23 @@ button {
 	}
 }
 
+.nav1 path{
+    fill: #a56fff;
+   
+}
+
+.nav1::after{
+    content: '';
+    position: absolute;
+    border-radius: 18px;
+    background: #a56fff;
+    height: 2px;
+    width: 25px;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+}
+
 @media (min-width: 375px) {
 	.price {
 		padding: 13px 3px 85px 70px;
