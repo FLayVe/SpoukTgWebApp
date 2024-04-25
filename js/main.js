@@ -55,7 +55,7 @@ function sendOrder() {
             .then(function (response) {
                 console.log(response);
                 alert('Повідомлення відправлено успішно!');
-                window.location.href = './main.html'
+                window.location.href = './main.html';
             })
             .catch(function (error) {
                 console.error(error);
