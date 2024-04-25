@@ -14,9 +14,6 @@ a, button, input, textarea {
     text-decoration: none;
 }
 
-
-
-
 .user {
     color: #E2BDFF;
     font-family: Montserrat;
@@ -60,7 +57,6 @@ a, button, input, textarea {
     display: flex;
     margin: 0 auto;
     max-width: 372px;
-
 }
 
 
@@ -70,7 +66,6 @@ a, button, input, textarea {
     bottom: 20px;
     left: 0;
     right: 0;
-
 }
 
 
@@ -160,7 +155,6 @@ a, button, input, textarea {
     height: 2px;
     width: 25px;
     bottom: -5px;
-    left: 0;
+    left: -2.8px;
     right: 0;
-    margin-left: -3px;
 }
