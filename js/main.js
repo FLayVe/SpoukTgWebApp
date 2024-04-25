@@ -10,7 +10,7 @@ window.addEventListener(
 		}
 	},
 	{ passive: false }
-);
+)
 
 const token = '6419070785:AAHaIp5r0-T5xsjdghyuq-6i2WB0J6Q3bOY';
 const groupChatId  = '-1002123032129';
