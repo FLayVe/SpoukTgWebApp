@@ -38,13 +38,13 @@
 
 <script>
 
-    let back_button = window.Telegram.WebApp.BackButton;
+    Telegram.WebApp.ready();
 
-    back_button.onClick(callback) = function (){
+    Telegram.WebApp.BackButton.onClick(function () {
         window.location.href = './main.html'
-    }
-    back_button.show()
+    });
 
+    Telegram.WebApp.BackButton.show();
 
 </script>
 
