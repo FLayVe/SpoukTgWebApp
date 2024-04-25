@@ -28,6 +28,7 @@ a, button, input, textarea {
 }
 
 .social__box {
+    margin: 0 auto;
     max-width: 347px;
     display: flex;
     align-items: center;
@@ -56,7 +57,10 @@ a, button, input, textarea {
 
 
 .main__user-img {
+    display: flex;
+    margin: 0 auto;
     max-width: 372px;
+
 }
 
 
@@ -68,6 +72,34 @@ a, button, input, textarea {
     right: 0;
 
 }
+
+
+@media (max-width: 425px) {
+    .main__user-img  {
+        width: 95%;
+    }
+}
+
+
+@media (max-width: 393px) {
+    .main__user-img  {
+        width: 95%;
+    }
+
+    .social__box {
+        padding: 22px 36px;
+    }
+    .social__name {
+        font-size: 16px;
+    }
+
+    .arrow {
+        height: 13px;
+    }
+
+}
+
+
 .nav__inner {
     display: flex;
     align-items: flex-end;
@@ -80,7 +112,7 @@ a, button, input, textarea {
         0px 4px 18px 0px rgba(154, 146, 210, 0.17) inset;
     backdrop-filter: blur(10.050000190734863px);
     padding: 14px 42px;
-    width: 290px;
+    width: 200px;
     margin: 0 auto;
 }
 .nav__link {
