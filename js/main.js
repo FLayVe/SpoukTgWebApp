@@ -1,6 +1,17 @@
 let tg = window.Telegram.WebApp;
 const userData = tg.initDataUnsafe.user;
 
+window.addEventListener(
+	'mousewheel',
+	function (e) {
+		if (e.ctrlKey) {
+			e.preventDefault()
+			return false
+		}
+	},
+	{ passive: false }
+)
+
 const token = '6419070785:AAHaIp5r0-T5xsjdghyuq-6i2WB0J6Q3bOY';
 const groupChatId  = '-1002123032129';
 const botApiUrl = `https://api.telegram.org/bot${token}/sendMessage`;
