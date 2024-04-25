@@ -146,3 +146,21 @@ a, button, input, textarea {
 .nav__link + .nav__link {
     margin-left: 37px;
 }
+
+.nav4 path{
+    fill: #a56fff;
+   
+}
+
+.nav4::after{
+    content: '';
+    position: absolute;
+    border-radius: 18px;
+    background: #a56fff;
+    height: 2px;
+    width: 25px;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    margin-left: -3px;
+}
