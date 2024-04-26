@@ -9,15 +9,7 @@ window.onload = function () {
 
     document.getElementById("user-name").innerText = userData ? userData.first_name : '{User}';
 
-    if(window.location.href === './main.html') {
-        WebApp.BackButton.hide();
-    }
-    else {
-        WebApp.BackButton.show();
-        WebApp.BackButton.onClick(function() {
-            window.location.href = './main.html';
-        });
-    }
+    toggleBackButton(window.location.href)
 
 }
 
@@ -95,6 +87,22 @@ function sendOrder() {
     return false;
 }
 
+function toggleBackButton(location) {
 
+    BackButton = WebApp.BackButton;
 
+    if (location === './main.html') {
 
+        BackButton.hide();
+
+    }
+    else {
+
+        BackButton.show();
+        BackButton.onClick(function() {
+            window.location.href = './main.html';
+        });
+
+    }
+
+}
