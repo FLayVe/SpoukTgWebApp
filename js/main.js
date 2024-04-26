@@ -92,9 +92,9 @@ function showBackButton() {
 
     BackButton.show();
     BackButton.onClick(function() {
-        BackButton.hide();
         window.location.href = './main.html';
     });
 }
+
 
 
