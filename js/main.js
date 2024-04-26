@@ -5,14 +5,6 @@ const token = '6419070785:AAHaIp5r0-T5xsjdghyuq-6i2WB0J6Q3bOY';
 const groupChatId  = '-1002123032129';
 const botApiUrl = `https://api.telegram.org/bot${token}/sendMessage`;
 
-window.onload = function () {
-
-    document.getElementById("user-name").innerText = userData ? userData.first_name : '{User}';
-
-    toggleBackButton(window.location.href)
-
-}
-
 window.addEventListener(
 	'mousewheel',
 	function (e) {
@@ -23,6 +15,10 @@ window.addEventListener(
 	},
 	{ passive: false }
 )
+
+function setUserFirstName() {
+    document.getElementById("user-name").innerText = userData ? userData.first_name : '{User}';
+}
 
 function sendOrder() {
 
@@ -91,7 +87,7 @@ function toggleBackButton(location) {
 
     BackButton = WebApp.BackButton;
 
-    if (location === './main.html') {
+    if (location === 'main') {
 
         BackButton.hide();
 
