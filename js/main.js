@@ -17,9 +17,19 @@ window.addEventListener(
 	{ passive: false }
 )
 
-function setUserFirstName() {
+window.onload = function () {
 
     document.getElementById("user-name").innerText = userData ? userData.first_name : '{User}';
+
+    if(window.location.href === './main.html') {
+        WebApp.BackButton.hide();
+    }
+    else {
+        WebApp.BackButton.show();
+        WebApp.BackButton.onClick(function() {
+            window.location.href = './main.html';
+        });
+    }
 
 }
 
@@ -86,15 +96,6 @@ function sendOrder() {
     return false;
 }
 
-function showBackButton() {
-
-    var BackButton = WebApp.BackButton;
-
-    BackButton.show();
-    BackButton.onClick(function() {
-        window.location.href = './main.html';
-    });
-}
 
 
 
