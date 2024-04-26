@@ -6,6 +6,17 @@ const groupChatId  = '-1002123032129';
 const botApiUrl = `https://api.telegram.org/bot${token}/sendMessage`;
 
 
+window.addEventListener(
+	'mousewheel',
+	function (e) {
+		if (e.ctrlKey) {
+			e.preventDefault()
+			return false
+		}
+	},
+	{ passive: false }
+)
+
 function setUserFirstName() {
 
     document.getElementById("user-name").innerText = userData ? userData.first_name : '{User}';
@@ -86,13 +97,4 @@ function showBackButton() {
     });
 }
 
-window.addEventListener(
-	'mousewheel',
-	function (e) {
-		if (e.ctrlKey) {
-			e.preventDefault()
-			return false
-		}
-	},
-	{ passive: false }
-)
+
