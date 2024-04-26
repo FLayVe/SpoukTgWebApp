@@ -79,21 +79,27 @@ button {
 		margin-top: 15px;
 	}
 
+	.welcome__wrapper-link {
+		display: block;
+	}
+
 	.welcome__inner {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 20px 20px 20px 0;
 	}
+
 	.welcome__user {
 		display: flex;
 		align-items: center;
 	}
+
 	.welcome__user-img {
 		margin-right: 15px;
 	}
 
-	.welcome__user-img img{
+	.welcome__user-img img {
 		max-width: 60px;
 		max-height: 60px;
 		object-fit: cover;
@@ -365,10 +371,10 @@ button {
 		backdrop-filter: blur(10.050000190734863px);
 		padding: 14px 42px;
 		width: 290px;
-    max-height: 55px;
+		max-height: 55px;
 		margin: 0 auto;
 	}
-	
+
 	.nav__link {
 		display: block;
 		position: relative;
@@ -402,28 +408,27 @@ button {
 	}
 }
 
-.nav1 path{
-    fill: #a56fff;
-   
+.nav1 path {
+	fill: #a56fff;
 }
 
-.nav1::after{
-    content: '';
-    position: absolute;
-    border-radius: 18px;
-    background: #a56fff;
-    height: 2px;
-    width: 25px;
-    bottom: -5px;
-    left: 0;
-    right: 0;
+.nav1::after {
+	content: '';
+	position: absolute;
+	border-radius: 18px;
+	background: #a56fff;
+	height: 2px;
+	width: 25px;
+	bottom: -5px;
+	left: 0;
+	right: 0;
 }
 
 @media (min-width: 375px) {
 	.price {
 		padding: 13px 3px 85px 70px;
 	}
-	.cases__img{
+	.cases__img {
 		right: -25px;
 	}
 }
