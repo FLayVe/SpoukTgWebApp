@@ -11,6 +11,14 @@
   <link rel="stylesheet" href="css/user.css">
   <link rel="stylesheet" href="css/reset.css">
 
+  <script>
+    function disableSelection() {
+      document.onselectstart = function () { return false; };
+      document.onmousedown = function () { return false; };
+    }
+    disableSelection();
+  </script>
+  
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <script src="js/main.js"></script>
 
