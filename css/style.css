@@ -234,9 +234,7 @@ button {
 	}
 
 	.cases:hover,
-	.cases:focus,
-	.price:hover,
-	.price:focus {
+	.price:hover {
 		box-shadow: 0px 4px 65.3px 0px #b414ff;
 	}
 
@@ -278,9 +276,7 @@ button {
 	}
 
 	.services__title:hover,
-	.services__title:focus,
-	.services__img:hover ~ .services__title,
-	.services__img:focus ~ .services__title {
+	.services__img:hover ~ .services__title {
 		box-shadow: 0px 4px 65px 0px #b414ff;
 	}
 
@@ -348,8 +344,7 @@ button {
 		transition: all .3s;
 	}
 
-	.reviews__title:hover,
-	.reviews__title:focus {
+	.reviews__title:hover {
 		box-shadow: 0px 4px 65.3px 0px #b414ff;
 	}
 
