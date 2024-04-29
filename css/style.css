@@ -138,7 +138,7 @@ button {
 		backdrop-filter: blur(50px);
 	}
 
-	.imoji {
+	.balance__imoji {
 		scale: 1.7;
 		padding-right: 5px;
 	}
