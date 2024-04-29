@@ -27,11 +27,6 @@ input {
 	border: none;
 }
 
-.imoji{
-	width: 50px;
-	height: 50px;
-}
-
 li {
 	list-style: none;
 	color: inherit;
@@ -85,7 +80,6 @@ button {
 	}
 
 	.welcome__wrapper-link {
-
 	}
 
 	.welcome__inner {
@@ -143,6 +137,12 @@ button {
 			0px 4px 18px 2px rgba(154, 146, 210, 0.25) inset;
 		backdrop-filter: blur(50px);
 	}
+
+	.imoji {
+		scale: 1.7;
+		padding-right: 5px;
+	}
+
 	.balance__amount {
 		color: #efdbff;
 		font-family: Montserrat;
@@ -160,10 +160,10 @@ button {
 		border: 0.5px solid #be97ff;
 		box-shadow: 0px 2px 43px 0px rgba(170, 32, 255, 0.76);
 		background: linear-gradient(107deg, #6f35ce 17.48%, #d7d7d7 183.37%);
-		transition: all .3s;
+		transition: all 0.3s;
 	}
 
-	.balance__btn:hover{
+	.balance__btn:hover {
 		box-shadow: 0px 0px 45px 5px #b414ff;
 	}
 
@@ -230,7 +230,7 @@ button {
 	.price,
 	.cases {
 		width: 160px;
-		transition: all .3s;
+		transition: all 0.3s;
 	}
 
 	.cases {
@@ -352,7 +352,7 @@ button {
 		box-shadow: 0px 4px 57.3px 0px #6d5175;
 		position: relative;
 		overflow: hidden;
-		transition: all .3s;
+		transition: all 0.3s;
 	}
 
 	.reviews__title:hover {
