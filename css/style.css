@@ -130,7 +130,7 @@ button {
 	.balance__inner {
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-between;
 		padding: 14px 15px 14px 22px;
 		border-radius: 45px;
 		background: #140123;
