@@ -15,6 +15,10 @@ body {
 	min-width: 320px;
 	border-radius: 55px;
 	background: #000;
+	background-image: url('../images/stars.png');
+	background-repeat: no-repeat;
+	object-fit: cover;
+	background-size: 100%;
 	min-height: 100vh;
 }
 
