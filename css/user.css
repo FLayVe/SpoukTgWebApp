@@ -99,7 +99,8 @@ textarea {
 	box-shadow: 0px 4px 222.8px 0px #780ffe,
 		0px 1px 40px 0px rgba(78, 26, 105, 0.58) inset,
 		0px 4px 18px 0px rgba(154, 146, 210, 0.17) inset;
-	backdrop-filter: blur(10.050000190734863px);
+	-webkit-backdrop-filter: blur(10px);
+    	backdrop-filter: blur(10px);
 	padding: 14px 42px;
 	max-width: 205px;
 	max-height: 55px;
