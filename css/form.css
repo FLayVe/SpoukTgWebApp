@@ -7,7 +7,9 @@
 .main {
     background: #000;
     background-size: cover;
+    position: relative;
     min-height: 100vh;
+    z-index: -2;
 }
 
 a, button, input, textarea { 
@@ -36,6 +38,8 @@ a, button, input, textarea {
     margin-bottom: -200px;
     width: 100%;
     flex-shrink: 0;
+    position: relative;
+    z-index: -1;
     animation: moveUpAstro 6s infinite alternate;
 }
 
