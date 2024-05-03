@@ -82,9 +82,10 @@ a, button, input, textarea {
     padding: 0px 20px;
     width: 80%;
 }
-input:focus {
+
+/* input:focus {
     outline: none;
-}
+} */
 
 
 
